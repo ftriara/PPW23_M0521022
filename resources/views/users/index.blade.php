@@ -33,11 +33,9 @@
                                 <a class="btn btn-warning" href="#">
                                     <i class="fas fa-edit"></i>
                                 </a>
-                                <form action="/users/{{ $book->id }}" method="post" class="d-inline">
-                                    @csrf
-                                    @method('delete')
-                                    <button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fas fa-trash"></i></button>
-                                </form>
+                                <a class="btn btn-danger" href="#">
+                                    <i class="fas fa-trash"></i>
+                                </a>
                             </td>
                         </tr>
                     @endforeach

@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+form {
+    margin-top: 30px;
+}
+
+#navbar {
+    background-color: white;
+}
+
+.top {
+    margin-left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/img/library.jpg");
+    background-size: cover;
+    text-align: center;
+    opacity: 50%;
+}
+
+.top .description {
+    top: 50%;
+    width: 100vw;
+    position: absolute;
+}
+
+footer {
+    color: #fff;
+    margin-top: 50px;
+    text-align: center;
+    height: 80px;
+    bottom: 0;
+}

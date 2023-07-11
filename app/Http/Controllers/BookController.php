@@ -14,6 +14,7 @@ class BookController extends Controller
     public function index()
     {
         return view('books.index', [
+            'title' => 'Data Buku',
             'books' => Book::all()
         ]);
     }
@@ -23,7 +24,9 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view('books.create');
+        return view('books.create', [
+            'title' => 'Tambah Data',
+        ]);
     }
 
     /**
@@ -55,6 +58,7 @@ class BookController extends Controller
     public function show(Book $book)
     {
         return view('books.show', [
+            'title' => 'Detail Buku',
             'book' => $book
         ]);
     }
@@ -65,6 +69,7 @@ class BookController extends Controller
     public function edit(Book $book)
     {
         return view('books.edit', [
+            'title' => 'Edit Data',
             'book' => $book
         ]);
     }

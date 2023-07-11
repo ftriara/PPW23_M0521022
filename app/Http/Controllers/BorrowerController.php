@@ -20,6 +20,7 @@ class BorrowerController extends Controller
             ->get();
 
         return view('borrowers.index', [
+            'title' => 'Data Peminjam',
             'borrowers' => $borrowers
         ]);
     }

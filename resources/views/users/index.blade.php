@@ -14,9 +14,7 @@
                         <th>No</th>
                         <th>Username</th>
                         <th>Nama</th>
-                        <th>Gender</th>
                         <th>Email</th>
-                        <th>No Telp</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -26,9 +24,7 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $user->username }}</td>
                             <td>{{ $user->name }}</td>
-                            <td>{{ $user->gender }}</td>
                             <td>{{ $user->email }}</td>
-                            <td>{{ $user->no_telp }}</td>
                             <td>
                                 <a class="btn btn-warning" href="#">
                                     <i class="fas fa-edit"></i>

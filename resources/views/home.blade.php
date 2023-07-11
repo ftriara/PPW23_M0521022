@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Digilib | {{ $title }}</title>
+    <title>Digilib | Home</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('template/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -33,20 +33,33 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        @include('partials.sidebar')
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
             <div id="content">
 
-                @include('partials.topbar')
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <h1>Digilib</h1>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <li>
+                            <a href="{{ route('login') }}">Login</a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
-                    @yield('container-fluid')
-                </div>
+                <img src="/img/library.jpg" width="100%" height="700px" alt="">
                 <!-- /.container-fluid -->
 
             </div>

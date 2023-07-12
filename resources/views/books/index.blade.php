@@ -13,11 +13,13 @@
         <h6 class="m-0 font-weight-bold text-primary">Data Buku</h6>
     </div>
     <div class="card-body">
+        @can('admin')
         <div class="mt-2 mb-4">
             <a class="btn btn-primary" href="/books/create">
                 <i class="fas fa-plus">&ensp;Tambah Data</i>
             </a>
         </div>
+        @endcan
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
@@ -44,6 +46,7 @@
                                 <a class="btn btn-info" href="/books/{{ $book->id }}">
                                     <i class="fas fa-eye"></i>
                                 </a>
+                                @can('admin')
                                 <a class="btn btn-warning" href="/books/{{ $book->id }}/edit">
                                     <i class="fas fa-edit"></i>
                                 </a>
@@ -52,6 +55,7 @@
                                     @method('delete')
                                     <button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fas fa-trash"></i></button>
                                 </form>
+                                @endcan
                             </td>
                         </tr>
                     @endforeach

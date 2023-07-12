@@ -12,6 +12,7 @@ class UserController extends Controller
      */
     public function index()
     {
+        $this->authorize('admin');
         return view('users.index', [
             'title' => 'Data Pengguna',
             'users' => User::all()

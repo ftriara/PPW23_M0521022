@@ -17,7 +17,6 @@
                         <th>Tanggal Pinjam</th>
                         <th>Tanggal Kembali</th>
                         <th>Status</th>
-                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,14 +28,6 @@
                             <td>{{ $borrower->tanggal_pinjam }}</td>
                             <td>{{ $borrower->tanggal_kembali }}</td>
                             <td>{{ $borrower->status }}</td>
-                            <td>
-                                <a class="btn btn-warning" href="#">
-                                    <i class="fas fa-edit"></i>
-                                </a>
-                                <a class="btn btn-danger" href="#">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
                         </tr>
                     @endforeach
                 </tbody>

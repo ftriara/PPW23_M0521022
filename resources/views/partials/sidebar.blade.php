@@ -29,6 +29,7 @@
         </a>
     </li>
 
+    @can('admin')
     <li class="nav-item {{ Request::is('borrowers') ? 'active' : '' }}">
         <a class="nav-link" href="/borrowers">
             <i class="fas fa-clipboard-list"></i>
@@ -42,6 +43,7 @@
             <span>Data Pengguna</span>
         </a>
     </li>
+    @endcan
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

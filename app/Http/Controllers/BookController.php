@@ -24,6 +24,7 @@ class BookController extends Controller
      */
     public function create()
     {
+        $this->authorize('admin');
         return view('books.create', [
             'title' => 'Tambah Data',
         ]);
@@ -34,6 +35,7 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('admin');
         $validatedData = $request->validate([
             'kode_buku' => 'required| string',
             'judul' => 'required| string',
@@ -68,6 +70,7 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
+        $this->authorize('admin');
         return view('books.edit', [
             'title' => 'Edit Data',
             'book' => $book
@@ -79,6 +82,7 @@ class BookController extends Controller
      */
     public function update(Request $request, Book $book)
     {
+        $this->authorize('admin');
         $validatedData = $request->validate([
             'kode_buku' => 'required| string',
             'judul' => 'required| string',
@@ -106,6 +110,7 @@ class BookController extends Controller
      */
     public function destroy(Book $book)
     {
+        $this->authorize('admin');
         if($book->cover) {
             Storage::delete($book->cover);
         }

@@ -13,6 +13,7 @@ class BorrowerController extends Controller
      */
     public function index()
     {
+        $this->authorize('admin');
         $borrowers = DB::table('borrowers')
             ->join('users', 'borrowers.user_id', '=', 'users.id')
             ->join('books', 'borrowers.book_id', '=', 'books.id')

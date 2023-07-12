@@ -15,7 +15,7 @@
                         <th>Username</th>
                         <th>Nama</th>
                         <th>Email</th>
-                        <th>Aksi</th>
+                        <th>Role</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,14 +25,7 @@
                             <td>{{ $user->username }}</td>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
-                            <td>
-                                <a class="btn btn-warning" href="#">
-                                    <i class="fas fa-edit"></i>
-                                </a>
-                                <a class="btn btn-danger" href="#">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
+                            <td>{{ $user->role }}</td>
                         </tr>
                     @endforeach
                 </tbody>
